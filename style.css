@@ -1,11 +1,11 @@
-.container-1,.container-2, .container-3 {
+.container-1,.container-2, .container-3, .container-4 {
     border: 1px solid red;
     width: 75%;
     margin: 0 auto;
     text-align: center;
 }
 
-.flex-box-container-1 {
+.flex-box-container-1, .flex-box-rps, .flex-box-pick-color {
     display: flex;
     border: 1px solid blue;
     flex-wrap: wrap;
@@ -21,6 +21,3 @@
   box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
 }
 
-.container-3{
-
-}

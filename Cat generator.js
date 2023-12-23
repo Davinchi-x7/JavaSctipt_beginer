@@ -14,6 +14,11 @@ image.src = "https://cdn2.thecatapi.com/images/5k7.gif"
 div.appendChild(image);
 }
 
+function reset1(){
+  document.getElementById('flex-cat-ge').remove();
+  
+}
+
 function rpsGame(yourChoice) {
     console.log(yourChoice);
     
@@ -28,9 +33,9 @@ function rpsGame(yourChoice) {
     message = finalMessage(results); // '{message': 'You Won!', 'color': 'green'}
     console.log(message);
     
-    rpsFrontEnd(yourChoice.id, botChoice, message);
-}
-
+    rpsFrontEnd(humanChoice, botChoice, message);
+  }
+  
 function randToRpsInt() {
     return Math.floor(Math.random() * 3);
 
@@ -77,19 +82,76 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
     var humanDiv = document.createElement('div')
     var botDiv = document.createElement('div')
     var messageDiv = document.createElement('div')
+    //var replayDiv = document.createElement('button')
 
     humanDiv.innerHTML = "<img src='" + imagesDatabase[humanImageChoice] + "' height=150 width=150 style='box-shadow: 0px 30px 50px rgba(37, 50, 233, 1);'>"
     messageDiv.innerHTML = "<h1 style='color: " + finalMessage['color'] + "; font-size:60px; padding:30px '>" + finalMessage['message'] + "</h1>"
     botDiv.innerHTML = "<img src='" + imagesDatabase[botImageChoice] + "' height=150 width=150 style='box-shadow: 0px 30px 50px rgba(37, 50, 233, 1);'>"
     
+    
     document.getElementById('flex-box-rps-div').appendChild(humanDiv);
     document.getElementById('flex-box-rps-div').appendChild(messageDiv);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
+
     
 
 }
 
-function reset() {
+/*function reset() {
   document.getElementById('rpsGame').remove();
+}*/
+
+// challenge 4: Change the color of all buttons
+var all_buttons = document.getElementsByTagName('button');
+
+
+var copyAllButtons = [];
+for (let i=0; i < all_buttons.length; i++) {
+  copyAllButtons.push(all_buttons[i].classList[1]);
 }
 
+
+
+function buttonColorChange(buttonThingy) {
+  if (buttonThingy.value === 'red') {
+    buttonsRed();
+  } else if (buttonThingy.value === 'green'){
+    buttonsGreen();
+  }else if (buttonThingy.value === 'reset'){
+    buttonColorReset();
+  }else if (buttonThingy.value === 'random'){
+    randomColors();
+  }
+}
+
+function buttonsRed() {
+  for (let i=0; i < all_buttons.length; i++){
+    all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+    all_buttons[i].classList.add('btn-danger');
+  }
+}
+function buttonsGreen() {
+  for (let i=0; i < all_buttons.length; i++){
+    all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+    all_buttons[i].classList.add('btn-success');
+  }
+}
+function buttonColorReset() {
+  for (let i=0; i < all_buttons.length; i++){
+    all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+    all_buttons[i].classList.add(copyAllButtons[i]);
+  }
+}
+
+
+function randomColors() {
+  var choices = ['btn-primary', 'btn-danger', 'btn-warning', 'btn-success'];
+
+  for (let i=0; i < all_buttons.length; i++) {
+    let randomNumber = Math.floor(Math.random() * 4);
+    all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+    all_buttons[i].classList.add(choices[randomNumber]);
+  }
+}
+
+// Black Jack Challenge

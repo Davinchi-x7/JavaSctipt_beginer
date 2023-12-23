@@ -32,7 +32,7 @@
            
            
         </div>
-        <button onclick="reset1()">reset</button>
+        <button class="btn btn-danger" onclick="reset1()">reset</button>
     </div>
 
     <!-- ROCK PAPER SCISSORS CHALLENGE-->
@@ -45,6 +45,27 @@
         </div>
         <div>
             <button class="btn btn-danger" onclick="reset()">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Button color changer-->
+
+    <div class="container-4">
+        <h2 id="change-my-color">Challenge 4: Change the color of all buttons</h2>
+        <div class="flex-box-pick-color">
+            <form action="">
+                <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                    <option value="random" >Random</option>
+                    <option value="red" >Red</option>
+                    <option value="green" >Green</option>
+                    <option value="reset" >Reset</option>
+                </select>
+             </form>
+
+            <button class="btn btn-primary">Wee!</button>
+            <button class="btn btn-danger">Yahoo!</button>
+            <button class="btn btn-warning">Google!</button>
+            <button class="btn btn-success">Facebook!</button>
         </div>
     </div>
 
