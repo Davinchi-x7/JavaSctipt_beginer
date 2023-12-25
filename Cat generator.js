@@ -155,3 +155,6 @@ function randomColors() {
 }
 
 // Black Jack Challenge
+function js(){
+  
+}

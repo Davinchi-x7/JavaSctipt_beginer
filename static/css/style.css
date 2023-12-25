@@ -1,0 +1,56 @@
+.container-1,.container-2, .container-3, .container-4, .container-5{
+    border: 1px solid red;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex-box-container-1, .flex-box-rps, .flex-box-pick-color,
+ .flex-blackjack-row-1, .flex-blackjack-row-2, .flex-blackjack-row-3{
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-blackjack-row-1, .flex-blackjack-row-2{
+    background: url('https://img.freepik.com/free-vector/green-geometric-background-patricks-day-colors_24908-58471.jpg?w=740&t=st=1703343256~exp=1703343856~hmac=9f458998e6d6ef8b2cf15d38fcf0ed77e19e16a188ef5965df90db0eb3385380');
+    color: #ffffff;
+}
+.flex-blackjack-row-1 img {
+    width: 25%;
+    padding: 10px;
+}
+.flex-blackjack-row-2 button{
+    border: 1px solid black;
+    padding: 10px;
+}
+.flex-blackjack-row-2 div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table, th, td {
+    padding: 5px;
+    border: 1px solid black;
+}
+.flex-blackjack-row-1 div {
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    height: 350px;
+}
+.flex-box-container-1 img{
+    border: 1px solid green;
+    padding: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+.flex-box-rps img:hover {
+  box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
+}
+
+
