@@ -166,7 +166,7 @@ let blackjackGame = {
   'draws':0,
   'isStand': false,
   'turnsOver': false,
-
+  
 };
 
 const YOU = blackjackGame['you']
@@ -189,6 +189,7 @@ function blackjackHit() {
     showScore(YOU);
     //console.log(YOU['score']);
   }
+  
     
 }
 
@@ -281,7 +282,8 @@ async function dealerLogic()  {
     //showResult(computeWinner());
   }
   
-  
+   
+   //blackjackGame['isStand'] = false;
    blackjackGame['turnsOver'] = true;
    let winner = computeWinner();
    showResult(winner);
